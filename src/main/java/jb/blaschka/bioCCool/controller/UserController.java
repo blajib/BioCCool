@@ -23,6 +23,7 @@ public class UserController {
             model.addAttribute("user", new Utilisateur());
         return "user/pageInscription";
     }
+
     @PostMapping("/doInscription")
     public String doInscription(@ModelAttribute Utilisateur utilisateur,Model model){
         try{
