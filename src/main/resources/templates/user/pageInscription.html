@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <div th:insert="../static/headLinks.html"></div>
+    <title>Inscription</title>
+</head>
+<body>
+<div th:insert="../static/headerNoRegister.html"></div>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-5 text-center">
+        <h2>Inscription</h2>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+<div class="row blocInscription">
+    <div class="col-md-3"></div>
+    <div class="col-md-5">
+    <form class="form-group" action="#" th:action="@{/doInscription}" method="POST" th:object="${user}">
+        <label for="nom">Nom</label>
+        <input type="text" class="form-control" th:field="*{nom}" id="nom">
+        <label for="prenom">Prenom</label>
+        <input type="text" class="form-control" th:field="*{prenom}" id="prenom">
+        <label for="mail">Mail</label>
+        <input type="email" class="form-control" th:field="*{mail}" id="mail">
+        <label for="pseudo">Pseudo</label>
+        <input type="text" class="form-control" th:field="*{pseudo}" id="pseudo">
+        <label for="password">Mot de passe</label>
+        <input type="password" class="form-control" th:field="*{password}" id="password">
+        <div class="text-center buttonInscrire">
+            <input  class="btn btn-info text-center" type="submit" value="S'inscrire">
+        </div>
+    </form>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div th:insert="../static/footer.html"></div>
+
+    </div>
+</div>
+
+</body>
+</html>
